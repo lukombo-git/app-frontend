@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <!-- Main content -->
+  <section class="content">
+       <!-- general form elements -->
+       <div class="card card-gray-dark">
+        <div class="card-header">
+          <h3 class="card-title">Candidatos Registados</h3>
+        </div>
+        
+        <table class="table align-items-center table-flush">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col" class="sort" data-sort="budget">Nome Completo</th>
+              <th scope="col" class="sort" data-sort="status">Província</th>
+              <th scope="col" class="sort" data-sort="status">Instituição</th>
+              <th scope="col" class="sort" data-sort="status">Curso</th>
+              <th scope="col" class="sort" data-sort="status">Nível Inglês</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody class="list">
+            {% for cand in candidates.result %}
+            <tr>
+              <td>{{cand.nome_completo}}</td>
+              <td>{{cand.provincia_residencia}}</td>
+              <td>{{cand.instituicao}}</td>
+              <td>{{cand.curso}}</td>
+              <td>{{cand.nivel_ingles}}</td>
+              <td class="text-right">
+                <div class="dropdown">
+                  <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                    <a class="dropdown-item" href="/api/frontend/candidates/view/{{cand.id_candidato}}">Visualizar</a>
+                    <a class="dropdown-item" href="/api/frontend/candidates/view_delete/{{cand.id_candidato}}">Deletar</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+          </br>  </br>
+    </div>
+  </section>
+  {% endblock %}

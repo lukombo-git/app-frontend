@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <!-- Main content -->
+  <section class="content" style="width: 1200px;">
+       <!-- general form elements -->
+       <div class="card card-gray-dark" style="width: 1200px;">
+        <div class="card-header">
+          <h3 class="card-title">Vagas Registadas</h3>
+        </div>
+        
+        <table class="table align-items-center table-flush" >
+          <thead class="thead-light">
+            <tr>
+              <th scope="col" class="sort" data-sort="budget">Titulo</th>
+              <th scope="col" class="sort" data-sort="status">Descrição</th>
+              <th scope="col" class="sort" data-sort="status">Categoria</th>
+              <th scope="col" class="sort" data-sort="status">Perfil</th>
+              <th scope="col" class="sort" data-sort="status">Província</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody class="list">
+            {% for vaga in vagas.result %}
+            <tr>
+              <td>{{vaga.titulo_Vaga}}</td>
+              <td>{{vaga.descricao_vaga}}</td>
+              <td>{{vaga.categoria_vaga}}</td>
+              <td>{{vaga.perfil_candidato}}</td>
+              <td>{{vaga.provincia_vaga}}</td>
+              <td class="text-right">
+                <div class="dropdown">
+                  <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                    <a class="dropdown-item" href="/api/frontend/vagas/view/{{vaga.id_vaga}}">Visualizar</a>
+                    <a class="dropdown-item" href="/api/frontend/vagas/view_delete/{{vaga.id_vaga}}">Deletar</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table> 
+  </div>
+  </section>
+  {% endblock %}

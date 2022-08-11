@@ -1,0 +1,53 @@
+
+{% extends "base.html" %}
+{% block content %}
+  <!-- Main content -->
+  <section class="content">
+       <!-- general form elements -->
+       <div class="card card-gray-dark">
+        <div class="card-header">
+          <h3 class="card-title">Actualizar Usuário</h3>
+        </div>
+          <form method="POST" action="/api/frontend/users/update/{{user.result.id}}">
+            <div class="container mt-5">
+                <div class="form-group">
+                    <input type = "hidden" class="form-control" name="id_user" value="{{user.result.id}}"/>
+                </div>
+                <div class="form-group">
+                <p>Nome de Usuário<input type = "text" class="form-control" name="username" value="{{user.result.username}}"/></p>
+                </div>
+                <div class="form-group">
+                <p>Primeiro Nome<input type = "text" class="form-control" name="first_name" value="{{user.result.first_name}}"/></p>
+                </div>
+                <div class="form-group">
+                <p>Último Nome<input type = "text" class="form-control" name="last_name" value="{{user.result.last_name}}"/></p>
+                </div>
+                <div class="form-group">
+                <p>Endereço<input type = "text" class="form-control" name="address" value="{{user.result.address}}"/></p>
+                </div>
+                <div class="form-group">
+                <p>Cidade<input type ="text" class="form-control" name="city" value="{{user.result.city}}"/></p>
+                </div>
+                <div class="form-group">
+                <p>País<input type = "text" class="form-control" name="country" value="{{user.result.country}}"/></p>
+                </div>
+                <div class="form-group">
+                  <p>Código Postal<input type = "text" class="form-control" name="post_code" value="{{user.result.post_code}}"/></p>
+                  </div>
+                  <div class="form-group">
+                    <p>Senha<input type = "text" class="form-control" name="password" value="{{user.result.password}}"/></p>
+                    </div>
+                <div class="form-group">
+                    <p><input type="submit" class="btn btn-primary" value="Actualizar"/></p>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+       </form> 
+          </div>
+      </div>
+    </div>
+  </section>
+  {% endblock %}
+

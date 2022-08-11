@@ -1,0 +1,4 @@
+stopwords
+wordnet
+words
+punkt

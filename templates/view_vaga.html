@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <!-- Main content -->
+  <section class="content">
+       <!-- general form elements -->
+       <div class="card card-gray-dark">
+        <div class="card-header">
+          <h3 class="card-title">Actualizar Vaga</h3>
+        </div>
+        <form method="POST" action="/api/frontend/vagas/update_vaga/{{vagas.result.id_vaga}}">
+          <div class="container mt-5">
+            <div class="form-group">
+              <input type ="hidden" class="form-control" name="id_vaga" value="{{vagas.result.id_vaga}}"/>
+              </div>
+              <div class="form-group">
+              <p>Titulo Vaga <input type = "text" class="form-control" name="titulo_Vaga" value="{{vagas.result.titulo_Vaga}}"/></p>
+              </div>
+              <div class="form-group">
+              <p>Categoria Vaga <input type = "text" class="form-control" name="categoria_vaga" value="{{vagas.result.categoria_vaga}}"/></p>
+              </div>
+              <div class="form-group">
+              <p>Tipo Vaga <input type = "text" class="form-control" name="tipo_vaga" value="{{vagas.result.tipo_vaga}}"/></p>
+              </div>
+              <div class="form-group">
+                <p>Requisitos Vaga <input type = "text" class="form-control" name="requisitos_vaga" value="{{vagas.result.requisitos_vaga}}"/></p>
+                </div>
+              <div class="form-group">
+              <p>Descrição Vaga <input type = "text" class="form-control" name="descricao_vaga" value="{{vagas.result.descricao_vaga}}"/></p>
+              </div>
+              <div class="form-group">
+              <p>Anos_exp_exigida Vaga <input type ="text" class="form-control" name="anos_exp_exigida" value="{{vagas.result.anos_exp_exigida}}"/></p>
+              </div>
+              <div class="form-group">
+              <p>Experiência Profissional <input type = "text" class="form-control" name="experiencia_profissional" value="{{vagas.result.experiencia_profissional}}"/></p>
+              </div>
+              <div class="form-group">
+              <p>Area Candidatura <input type = "text" class="form-control" name="area_candidatura" value="{{vagas.result.area_candidatura}}"/></p>
+              </div>
+              <div class="form-group">
+              <p>Perfil Candidato<input type = "text" class="form-control" name="perfil_candidato" value="{{vagas.result.perfil_candidato}}"/></p>
+              </div>
+              <div class="form-group">
+              <p>Habilitações<input type = "text" class="form-control" name="habilitacoes" value="{{vagas.result.habilitacoes}}"/></p>
+              </div>
+              <div class="form-group">
+              <p>Província Vaga<input type = "text" class="form-control" name="provincia_vaga" value="{{vagas.result.provincia_vaga}}"/></p>
+              </div>
+              <div class="form-group">
+              <p>Nível Inglês Vaga <input type = "text" class="form-control" name="nivel_ingles_vaga" value="{{vagas.result.nivel_ingles_vaga}}"/></p>
+              </div>
+              <div class="form-group">
+                <p>Habilidades Exigida <input type = "text" class="form-control" name="habilidades_exigida" value="{{vagas.result.habilidades_exigida}}"/></p>
+              </div>
+              <div class="form-group">
+                <p>Data Início Vaga<input type = "text" class="form-control" name="data_inicio_vaga" value="{{vagas.result.data_inicio_vaga}}"/></p>
+              </div>
+              <div class="form-group">
+                <p>Data Término Vaga<input type = "text" class="form-control" name="data_termino_vaga" value="{{vagas.result.data_termino_vaga}}"/></p>
+              </div>
+              <div class="form-group">
+              <p><input type="submit" class="btn btn-primary" value="Actualizar"/></p>
+              </div>
+            </form>
+          </div>
+      </div>
+    </div>
+  </section>
+  {% endblock %}

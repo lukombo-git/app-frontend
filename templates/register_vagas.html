@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <!-- Main content -->
+  <section class="content">
+       <!-- general form elements -->
+       <div class="card card-gray-dark">
+        <div class="card-header">
+          <h3 class="card-title">Registar Vaga</h3>
+        </div>
+        
+        <form method="POST" role="form">
+          <div class="container mt-5">
+            <form method="POST">
+              {{ form.hidden_tag() }}
+              <div class="form-group">
+                  {{ form.titulo_vaga.label(class_="form-label") }}
+                  {{ form.titulo_vaga(class_="form-control") }}
+              </div>
+              <div class="form-group">
+                {{ form.categoria_vaga.label(class_="form-label") }}
+                {{ form.categoria_vaga(class_="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.area_candidatura.label(class_="form-label") }}
+                {{ form.area_candidatura(class_="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.descricao_vaga.label(class_="form-label") }}
+                {{ form.descricao_vaga(class_="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.tipo_vaga.label(class_="form-label") }}
+                {{ form.tipo_vaga(class_="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.requisitos_vaga.label(class_="form-label") }}
+                {{ form.requisitos_vaga(class_="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.perfil_candidato.label(class_="form-label") }}
+                {{ form.perfil_candidato(class_="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.habilitacoes.label(class_="form-label") }}
+                {{ form.habilitacoes(class_="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.provincia_vaga.label(class_="form-label") }}:
+                {{ form.provincia_vaga(class_="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.nivel_ingles_vaga.label(class_="form-label") }}
+                {{ form.nivel_ingles_vaga(class_="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.habilidades_exigida.label(class_="form-label") }}
+                {{ form.habilidades_exigida(class_="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.experiencia_profissional.label(class_="form-label") }}
+                {{ form.experiencia_profissional(class_="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.anos_exp_exigida.label(class_="form-label") }}
+                {{ form.anos_exp_exigida(class_="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.data_inicio_vaga.label(class_="form-label") }}
+                {{ form.data_inicio_vaga(class_="form-control") }}
+            </div>
+            <div class="form-group">
+                {{ form.data_termino_vaga.label(class_="form-label") }}
+                {{ form.data_termino_vaga(class_="form-control") }}
+            </div>
+            {{ form.submit(class_="btn btn-primary") }}
+            </form>
+          </br>  </br>
+    </div>
+  </section>
+  {% endblock %}

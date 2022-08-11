@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+  <!-- Main content -->
+  <section class="content">
+       <!-- general form elements -->
+       <div class="card card-gray-dark">
+        <div class="card-header">
+          <h3 class="card-title">Candidatos Classificados</h3>
+        </div>
+        
+        <table class="table align-items-center table-flush">
+          <thead>
+            <th>Class.</th>
+            <th>Estado</th>
+            <th>Habilidades</th>
+            <th>Nome</th>
+            <th>Província</th>
+            <th>Habilitações</th>
+            <th>Curso</th>
+            <th>Nível Ingles</th>
+            <th>Currículum</th>
+          </tr>
+          </thead>
+          <tbody>
+            {% for classificacao,estado,habilidades,nome, provincia, habilitacoes, curso, nivel_ingles, lista_curriculums in dados_candidato %}
+                          <tr>
+                          <td>{{classificacao}}</td>
+                          <td>{{estado}}</td>
+                          <td>{{habilidades}}</td>
+                          <td>{{nome}}</td>
+                          <td>{{provincia}}</td>
+                          <td>{{habilitacoes}}</td>
+                          <td>{{curso}}</td>
+                          <td>{{nivel_ingles}}</td>
+                          {% if lista_curriculums %}
+                          <td>
+                            <a href="{{ url_for('frontend.display_file', filename=lista_curriculums)}}" class="btn btn-outline-primary" target="_blank"><i class="fa fa-file-alt"></i> Abrir</a>
+                          </td>
+                          {% endif %}
+                        </tr>
+            {% endfor %}
+        </table>
+    </div>
+  </section>
+  {% endblock %}

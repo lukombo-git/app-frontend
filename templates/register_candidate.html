@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cadastrar novo Candidato</title>
+	<link rel="icon" href="/static/images/unitel_trans.png" type="image/png">
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="/static/css1/css/montserrat-font.css">
+	<link rel="stylesheet" type="text/css" href="/static/css1/css/material-design-iconic-font.min.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="/static/css1/css/style.css"/>
+</head>
+<body class="form-v10">
+	<div class="page-content">
+		<div class="form-v10-content">
+			<form class="form-detail" action="#" method="post" enctype="multipart/form-data">
+				<div class="form-left">
+					<h2>Informações de Candidatura</h2>
+					<div class="form-row">
+						<input type="text" name="nome_completo" id="nome_completo" class="company" placeholder="Nome Completo" title="Nome Completo" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="data_nascimento" id="data_nascimento" class="input-text" placeholder="Data de Nascimento" title="Data de Nascimento" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="natural_de" id="natural_de" class="input-text" placeholder="Naturalidade" title="Naturalidade" required>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="n_bilhete" id="n_bilhete" class="input-text" placeholder="Nº do Bilhete" title="Número de Bilhete de Identidade" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="provincia_residencia" id="provincia_residencia" class="input-text" placeholder="Província Residência" title="Província de Residência" required>
+						</div>
+					</div>
+					<div class="form-row">
+						<select name="genero" title="Genero" required="true">
+						    <option value="">Selecionar Genero</option>
+						    <option value="Masculino">Masculino</option>
+						    <option value="Feminino">Feminino</option>
+						</select>
+						<span class="select-btn">
+						  	<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+					</div>
+					<div class="form-row">
+						<input type="text" name="telemovel_principal" class="company" id="company" placeholder="Telemovel Principal" title="Telemóvel Principal" required>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-3">
+							<input type="email" name="email" class="business" id="email" placeholder="Email" title="Email" required>
+						</div>
+						<div class="form-row form-row-4">
+							<select name="habilitacoes_academica" title="Habilitações Acadêmica" required="true">
+								<option value="">Habilitações</option>
+							    <option value="Técnico Médio">Técnico Médio</option>
+							    <option value="Bacharel">Bacharel</option>
+							    <option value="Licenciado">Licenciado</option>
+							    <option value="Dourado">Doutorado</option>
+							</select>
+							<span class="select-btn">
+							  	<i class="zmdi zmdi-chevron-down"></i>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="form-right">
+					<h2>Outras Informações</h2>
+					<div class="form-row">
+						<input type="text" name="instituicao" class="street" id="instituicao" placeholder="Instituição" title="Instituição" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="curso" class="additional" id="curso" placeholder="Curso" title="Curso" required>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="ano_conclusao" class="zip" id="ano_conclusao" placeholder="Ano Conclusão" title="Ano Conclusão" required>
+						</div>
+						<div class="form-row form-row-2">
+								<input type="text" name="media_final" class="code" id="phone" placeholder="Média Final" title="Media Final" required>
+						</div>
+					</div>
+					<div class="form-row">
+						<select name="area_candidatura" title="Área de Candidatura" required="true">
+							<option value="">Selecionar A. Candidatura</option>
+						    <option value="Saúde">Saúde</option>
+						    <option value="Tecnologia de Informação">Tecnologia de Informação</option>
+						    <option value="Direito">Direito</option>
+						    <option value="Contabilidade">Contabilidade</option>
+						</select>
+						<span class="select-btn">
+						  	<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+					</div>
+					<div class="form-group">
+						<div class="form-row form-row-1">
+							<input type="text" name="ano_experiencia_area" class="phone" id="ano_experiencia_area" placeholder="Ano de Experiência na Área" title="Ano de Experiência na Área" required>
+						</div>
+						<div class="form-row form-row-2">
+							<input type="text" name="disponibilidade" class="code" id="phone" placeholder="Disponibilidade" title="Disponibilidade" required>
+						</div>
+					</div>
+					<div class="form-row">
+						<input type="text" name="nivel_ingles" id="nivel_ingles" class="input-text" required placeholder="Nível Inglês" title="Nível Inglês" required>
+					</div>
+					<div class="form-row">
+						<input type="file" name="curriculum" id="curriculum" class="input-text" required placeholder="curriculums" title="Carregar o Curriculum" required>
+					</div>
+					<div class="form-row-last">
+						<input type="submit" name="registar" class="register" value="Registar">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Página de Candidatura</title>
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Microserviços</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Dashboard</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <body>
+    {% block pageContent %}
+      <div class="container mt-5">
+        <h1>Cadastramento Candidato</h1>
+        <form method="POST" enctype="multipart/form-data">
+          {{ form.hidden_tag() }}
+          <div class="form-group">
+              {{ form.nome_completo.label(class_="form-label") }}:
+              {{ form.nome_completo(class_="form-control") }}
+          </div>
+          <div class="form-group">
+            {{ form.data_nascimento.label(class_="form-label") }}:
+            {{ form.data_nascimento(class_="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.natural_de.label(class_="form-label") }}:
+            {{ form.natural_de(class_="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.genero.label(class_="form-label") }}:
+            {{ form.genero(class_="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.n_bilhete.label(class_="form-label") }}:
+            {{ form.n_bilhete(class_="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.provincia_residencia.label(class_="form-label") }}:
+            {{ form.provincia_residencia(class_="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.telemovel_principal.label(class_="form-label") }}:
+            {{ form.telemovel_principal(class_="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.email.label(class_="form-label") }}:
+            {{ form.email(class_="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.habilitacoes_academica.label(class_="form-label") }}:
+            {{ form.habilitacoes_academica(class_="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.instituicao.label(class_="form-label") }}:
+            {{ form.instituicao(class_="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.curso.label(class_="form-label") }}:
+            {{ form.curso(class_="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.ano_conclusao.label(class_="form-label") }}:
+            {{ form.ano_conclusao(class_="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.media_final.label(class_="form-label") }}:
+            {{ form.media_final(class_="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.area_candidatura.label(class_="form-label") }}:
+            {{ form.area_candidatura(class_="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.ano_experiencia_area.label(class_="form-label") }}:
+            {{ form.ano_experiencia_area(class_="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.disponibilidade.label(class_="form-label") }}:
+            {{ form.disponibilidade(class_="form-control") }}
+        </div>
+        <div class="form-group">
+            {{ form.nivel_ingles.label(class_="form-label") }}:
+            {{ form.nivel_ingles(class_="form-control") }}
+        </div>
+        {{ form.submit(class_="w-100 btn btn-primary mt-3") }}
+        </form>
+      </div>
+      {% endblock %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

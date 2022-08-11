@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <!-- Main content -->
+  <section class="content">
+       <!-- general form elements -->
+       <div class="card card-gray-dark">
+        <div class="card-header">
+          <h3 class="card-title">Usuários Registados</h3>
+        </div>
+        
+        <table class="table align-items-center table-flush">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col" class="sort" data-sort="budget">Nome de Usuário</th>
+              <th scope="col" class="sort" data-sort="status">Primeiro Nome</th>
+              <th scope="col" class="sort" data-sort="status">Último Nome</th>
+              <th scope="col" class="sort" data-sort="status">Endereço</th>
+              <th scope="col" class="sort" data-sort="status">Cidade</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody class="list">
+            {% for cand in users.result %}
+            <tr>
+              <td>{{cand.username}}</td>
+              <td>{{cand.first_name}}</td>
+              <td>{{cand.last_name}}</td>
+              <td>{{cand.address}}</td>
+              <td>{{cand.city}}</td>
+              <td class="text-right">
+                <div class="dropdown">
+                  <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                    <a class="dropdown-item" href="/api/frontend/users/view/{{cand.id}}">Visualizar</a>
+                    <a class="dropdown-item" href="/api/frontend/users/view_delete/{{cand.id}}">Deletar</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+          </br>  </br>
+    </div>
+  </section>
+  {% endblock %}
