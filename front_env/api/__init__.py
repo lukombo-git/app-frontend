@@ -1,4 +1,4 @@
-USER_API_URL = 'http://127.0.0.1:5001/'
-VAGAS_API_URL='http://127.0.0.1:5002/'
-CANDIDATES_API_URL='http://127.0.0.1:5003/'
-CURRICULUMS_API_URL='http://127.0.0.1:5004/'
+USER_API_URL = 'https://flask-user-app.herokuapp.com/'
+VAGAS_API_URL='https://app-vagas.herokuapp.com/'
+CANDIDATES_API_URL='https://app-candidates.herokuapp.com/'
+CURRICULUMS_API_URL='https://curriculums-app.herokuapp.com/'
